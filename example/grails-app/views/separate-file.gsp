@@ -3,7 +3,7 @@
 
 <head>
     <title>Todos</title>
-    <r:require module="todo_separate"/>
+    <link rel="stylesheet" type="text/css" href="${resource(dir: 'css', file: 'todos.css')}" />
     <meta name="layout" content="main">
 </head>
 
@@ -76,6 +76,11 @@
     </span>
     {! } !}
 </script>
+
+<g:javascript library='jquery' />
+<script type="text/javascript" src="${resource(dir: 'js', file: 'underscore.js')}"></script>
+<script type="text/javascript" src="${resource(dir: 'js', file: 'backbone.js')}"></script>
+<script type="text/javascript" src="${resource(dir: 'js', file: 'todos.js')}"></script>
 
 </body>
 
