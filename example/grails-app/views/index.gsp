@@ -78,8 +78,8 @@
 </script>
 
 <g:javascript library='jquery' />
-<script type="text/javascript" src="${resource(dir: 'js', file: 'underscore.js')}"></script>
-<script type="text/javascript" src="${resource(dir: 'js', file: 'backbone.js')}"></script>
+<script type="text/javascript" src="${resource(dir: 'js', file: 'lib/underscore.js')}"></script>
+<script type="text/javascript" src="${resource(dir: 'js', file: 'lib/backbone.js')}"></script>
 
 <script type="text/javascript">
 

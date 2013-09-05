@@ -13,7 +13,7 @@ class UrlMappings {
 
         "/"(view:"/index")
 		"/start"(view:"/index")
-        "/separate-file"(view:"/separate-file")
+        "/first-class"(view:"/first-class")
 		"500"(view:'/error')
 	}
 }
