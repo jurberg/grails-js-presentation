@@ -179,7 +179,7 @@
                 <li>Code Quality</li>
                 <li>Unit Tests</li>
                 <li>Code Coverage</li>
-                <li>Obsfucation</li>
+                <li>Minification</li>
                 <li>Bundling</li>
             </ol>
         </section>
@@ -207,9 +207,9 @@
             <ul>
                 <li>Require 'use strict'</li>
                 <li>Require semicolons</li>
-                <li>No global variables</li>
+                <li>No global variables unless specified</li>
                 <li>=== instead of ==</li>
-                <li>and many more...</li>
+                <li>many more...</li>
             </ul>
         </section>
 
@@ -222,7 +222,11 @@
         <section>
             <h3>Grails Scripts</h3>
             <br><br>
-            <p>JSLint failure === build failure</p>
+            <ul>
+                <li>Run <a href="https://github.com/arthurakay/LintRoller/tree/v1.3.0">PhantomLint.js</a> thru PhantomJS</li>
+                <li>Configure using LintConfig.js</li>
+                <li>JSLint failure === build failure</li>
+            </ul>
         </section>
 
         <section>
