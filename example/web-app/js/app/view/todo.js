@@ -1,4 +1,6 @@
+/*global Backbone, _, $ */
 var TodoView = (function() {
+  'use strict';
 
   // Todo Item View
   // --------------
@@ -61,7 +63,9 @@ var TodoView = (function() {
 
     // If you hit `enter`, we're through editing the item.
     updateOnEnter: function(e) {
-      if (e.keyCode == 13) this.close();
+      if (e.keyCode === 13) {
+        this.close();
+      }
     },
 
     // Remove this view from the DOM.

@@ -1,4 +1,6 @@
+/*global Backbone, $, _, clearTimeout, Todos, TodoView */
 var AppView = (function(Todos, TodoView) {
+  'use strict';
 
   // The Application
   // ---------------
@@ -59,7 +61,9 @@ var AppView = (function(Todos, TodoView) {
     // create new **Todo** model persisting it to *localStorage*.
     createOnEnter: function(e) {
       var text = this.input.val();
-      if (!text || e.keyCode != 13) return;
+      if (!text || e.keyCode !== 13) {
+        return;
+      }
       Todos.create({text: text});
       this.input.val('');
     },
@@ -76,8 +80,12 @@ var AppView = (function(Todos, TodoView) {
       var tooltip = this.$(".ui-tooltip-top");
       var val = this.input.val();
       tooltip.fadeOut();
-      if (this.tooltipTimeout) clearTimeout(this.tooltipTimeout);
-      if (val == '' || val == this.input.attr('placeholder')) return;
+      if (this.tooltipTimeout) {
+        clearTimeout(this.tooltipTimeout);
+      }
+      if (val === '' || val === this.input.attr('placeholder')) {
+        return;
+      }
       var show = function(){ tooltip.show().fadeIn(); };
       this.tooltipTimeout = _.delay(show, 1000);
     }
