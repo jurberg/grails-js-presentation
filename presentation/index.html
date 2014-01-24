@@ -34,7 +34,7 @@
 
     <div class="slides">
 
-        <section>
+        <section data-background-transition="slide">
             <h2>Grails in the JavaScript Age</h2>
             <p>
                 <br><br><br>
@@ -93,7 +93,7 @@
             </small>
         </section>
         <section>
-            <h2>Java</h2>
+            <h2>Java / Awk / Perl</h2>
             <h2>&#x21e9;</h2>
             <h3>Syntax</h3>
         </section>
@@ -202,8 +202,11 @@
             <h2>Code Quality</h2>
             <br>
             <h3>JSLint</h3>
+        </section>
+
+        <section>
+            <h3>Static code analysis</h3>
             <br>
-            <p>Static code analysis</p>
             <ul>
                 <li>Require 'use strict'</li>
                 <li>Require semicolons</li>
@@ -262,9 +265,20 @@
         </section>
 
         <section>
+            <h3>Grails Scripts</h3>
+            <br><br>
+            <ul>
+                <li>Startup the JSCover server</li>
+                <li>Run the tests using PhantomJS through the JSCover server</li>
+                <li>Export the coverage report to Cobertura XML</li>
+                <li>Jasmine failure === build failure</li>
+            </ul>
+        </section>
+
+        <section>
             <h3>Obsfucation</h3>
             <br><br>
-            <p>Google Closure</p>
+            <p>Google Closure Plugin</p>
         </section>
 
         <section>
