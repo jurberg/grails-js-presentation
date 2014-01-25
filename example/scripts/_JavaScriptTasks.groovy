@@ -149,8 +149,8 @@ target(runJsCover: 'Runs JSCover Coverage Report') {
         // generate the coverage report
         Ant.java(classpath: "${testResourcesDir}/JSCover-all.jar", classname: "jscover.report.Main") {
             arg(line: "--format=COBERTURAXML")
-            arg(line: "${targetDir}/phantom")
-            arg(line: "${basedir}")
+            arg(line: "\"${targetDir}/phantom\"")
+            arg(line: "\"${basedir}\"")
         }
 
         // rename the file
