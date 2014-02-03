@@ -1,6 +1,8 @@
 // An example Backbone application contributed by
 // [Jérôme Gravel-Niquet](http://jgn.me/).
+/*global $, AppView, window */
 (function(AppView) {
+  'use strict';
 
   // Load the application once the DOM is ready, using `jQuery.ready`:
   $(function() {

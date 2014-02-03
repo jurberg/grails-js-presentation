@@ -1,4 +1,6 @@
+/*global Backbone */
 var TodoModel = (function() {
+  'use strict';
 
   var counter = 1;
 
