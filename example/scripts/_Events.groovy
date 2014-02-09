@@ -5,6 +5,7 @@ includeTargets << new File("scripts/_JavaScriptTasks.groovy")
 eventTestPhasesStart = { phasesToRun ->
     phasesToRun << "jslint"
     phasesToRun << "jasmine"
+    phasesToRun << "jscover"
 }
 
 jslintTests = [new JUnit4GrailsTestType("jslint", "spec")]
@@ -19,3 +20,8 @@ jasmineTestPhasePreparation = {
 }
 jasmineTestPhaseCleanUp = {}
 
+jscoverTests = [new JUnit4GrailsTestType("jscover", "spec")]
+jscoverTestPhasePreparation = {
+    runJsCover()
+}
+jscoverTestPhaseCleanUp = {}
