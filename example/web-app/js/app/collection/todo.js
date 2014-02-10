@@ -1,5 +1,5 @@
-/*global Backbone, TodoModel */
-var Todos = (function(Todo) {
+/*global define */
+define(['backbone', 'app/model/todo'], function(Backbone, Todo) {
   'use strict';
 
   // Todo Collection
@@ -44,4 +44,4 @@ var Todos = (function(Todo) {
 
   return Todos;
 
-}(TodoModel));
+});

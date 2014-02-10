@@ -1,5 +1,11 @@
-/*global _, $, Backbone, Todos, TodoView, clearTimeout */
-var AppView = (function(Todos, TodoView) {
+/*global define, clearTimeout */
+define([
+  'underscore',
+  'jquery',
+  'backbone',
+  'app/collection/todo',
+  'app/view/todo'
+], function(_, $, Backbone, Todos, TodoView) {
   'use strict';
 
   // The Application
@@ -94,4 +100,4 @@ var AppView = (function(Todos, TodoView) {
 
   return AppView;
 
-}(Todos, TodoView));
+});

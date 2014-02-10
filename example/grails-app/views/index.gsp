@@ -1,5 +1,3 @@
-<r:require module="application"/>
-
 <!DOCTYPE html>
 <html>
 
@@ -78,6 +76,8 @@
     </span>
     {! } !}
 </script>
+
+<script data-main="js/bootstrap${grailsApplication.isWarDeployed() ? '-build' : ''}" src="js/lib/require.js"></script>
 
 </body>
 

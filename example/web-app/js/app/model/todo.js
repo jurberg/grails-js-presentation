@@ -1,5 +1,5 @@
-/*global Backbone */
-var TodoModel = (function() {
+/*global define */
+define(['backbone'], function(Backbone) {
   'use strict';
 
   var counter = 1;
@@ -27,4 +27,4 @@ var TodoModel = (function() {
 
   return Todo;
 
-}());
+});

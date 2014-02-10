@@ -1,5 +1,5 @@
-/*global _, $, Backbone */
-var TodoView = (function() {
+/*global define */
+define(['underscore', 'jquery', 'backbone'], function(_, $, Backbone) {
   'use strict';
 
   // Todo Item View
@@ -82,4 +82,4 @@ var TodoView = (function() {
 
   return TodoView;
 
-}());
+});
