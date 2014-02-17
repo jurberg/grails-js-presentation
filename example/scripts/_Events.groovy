@@ -27,12 +27,26 @@ jscoverTestPhasePreparation = {
 jscoverTestPhaseCleanUp = {}
 
 eventCreateWarStart = {warName, stagingDir ->
+
     def curDir = new File('Scripts')
+
+    /*
+     * Running r.js thru Rhino causes stack overflow
     ant.exec(outputproperty: "cmdOut", errorproperty: "cmdErr", resultproperty: "cmdExit", failonerror: "false", executable: "java") {
         arg(line: "-cp ${new File(curDir, 'js.jar').absolutePath}")
         arg(line: "org.mozilla.javascript.tools.shell.Main")
         arg(line: "${new File(curDir, 'r.js').absolutePath}")
         arg(line: "-o")
+        arg(line: "name=bootstrap")
+        arg(line: "baseUrl=${stagingDir}/js")
+        arg(line: "out=${stagingDir}/js/bootstrap-build.js")
+    }
+    */
+
+    ant.exec(outputproperty: "cmdOut", errorproperty: "cmdErr", resultproperty: "cmdExit", failonerror: "false", executable: "node") {
+        arg(line: "${new File(curDir, 'r.js').absolutePath}")
+        arg(line: "-o")
+        arg(line: "${curDir}/build.js")
         arg(line: "name=bootstrap")
         arg(line: "baseUrl=${stagingDir}/js")
         arg(line: "out=${stagingDir}/js/bootstrap-build.js")

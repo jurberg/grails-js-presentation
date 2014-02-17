@@ -1,18 +1,15 @@
-var deps = deps || ['main'];
-var baseUrl = baseUrl || 'js';
-
 /*global require, _ */
-/*jslint regexp: false*/
+/*jslint regexp: true */
 (function() {
   'use strict';
   require.config({
-    deps: deps,
-    baseUrl: baseUrl,
+    name: 'bootstrap',
+    deps: ['main'],
+    baseUrl: 'js',
     paths: {
       jquery: 'lib/jquery-1.7.1',
       underscore: 'lib/underscore',
-      backbone: 'lib/backbone',
-      spec: '../../test/spec'
+      backbone: 'lib/backbone'
     },
     shim: {
       backbone: {
