@@ -87,31 +87,23 @@
         </section>
 
         <section>
-            <h2>Java</h2>
-            <h2>&#x21e9;</h2>
-            <h3>Syntax</h3>
-            <h3>Primitives and objects</h3>
-            <h3>The Date constructor</h3>
+            <p>But despite JavaScript's astonishing shortcomings, deep down, in its core, it got something very right.
+                When you peel away the cruft, there is an expressive and powerful programming language there.</p>
+            <br><br><br>
+            <small>Douglas Crockford<br>
+                <a href="http://javascript.crockford.com/popular.html">http://javascript.crockford.com/popular.html</a>
+            </small>
         </section>
 
         <section>
-            <h2>AWK</h2>
-            <h2>&#x21e9;</h2>
-            <h3>Functions</h3>
-        </section>
-
-        <section>
-            <h2>Perl and Python</h2>
-            <h2>&#x21e9;</h2>
-            <h3>Strings</h3>
-            <h3>Arrays</h3>
-            <h3>Regular expressions</h3>
+            <h2>Influences</h2>
         </section>
 
         <section>
             <h2>Self</h2>
             <h2>&#x21e9;</h2>
             <h3>Prototypal inheritance</h3>
+            <h3>Dynamic Typing</h3>
         </section>
 
         <section>
@@ -122,12 +114,7 @@
         </section>
 
         <section>
-            <p>But despite JavaScript's astonishing shortcomings, deep down, in its core, it got something very right.
-                When you peel away the cruft, there is an expressive and powerful programming language there.</p>
-            <br><br><br>
-            <small>Douglas Crockford<br>
-                <a href="http://javascript.crockford.com/popular.html">http://javascript.crockford.com/popular.html</a>
-            </small>
+            <h3>JavaScript needs to be treated like any other language in your project.</h3>
         </section>
 
         <section>
@@ -177,10 +164,6 @@
         </section>
 
         <section>
-            <h3>JavaScript needs to be treated like any other language in your project.</h3>
-        </section>
-
-        <section>
             <ol>
                 <li>Modularization</li>
                 <li>Code Quality</li>
@@ -212,23 +195,44 @@
         </section>
 
         <section>
-            <ol>
+            <h3>Example Checks</h3>
+            <br>
+            <ul>
                 <li>Require 'use strict'</li>
                 <li>Require semicolons</li>
                 <li>No global variables unless specified</li>
                 <li>=== instead of ==</li>
-                <li>many more...</li>
-            </ol>
+                <li>var declarations at top of scope</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>GOAL</h3>
+            <br>
+            <ul>
+            <li>Run JSLint as part of Grails build</li>
+            <li>Fail build when JSLint fails</li>
+            </ul>
         </section>
 
         <section>
             <h3>PhantomJS</h3>
             <br><br>
             <p>Headless Webkit Browser</p>
+            <p>Scriptable JavaScript API</p>
         </section>
 
         <section>
-            <h3>Grails Scripts</h3>
+            <h3>Grails Build</h3>
+            <br><br>
+            <ul>
+                <li>GANT based</li>
+                <li>Events allow extension</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>JSLint Scripts</h3>
             <br><br>
             <ul>
                 <li>Run <a href="https://github.com/arthurakay/LintRoller/tree/v1.3.0">PhantomLint.js</a> thru PhantomJS</li>
@@ -254,11 +258,21 @@
         </section>
 
         <section>
-            <h3>Grails Scripts</h3>
+            <h3>GOAL</h3>
+            <br>
+            <ul>
+            <li>Run JavaScript tests as part of Grails build</li>
+            <li>Fail build when tests fail</li>
+                <li>Save results as JUnit XML results</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Jasmine Scripts</h3>
             <br><br>
             <ul>
                 <li>Use a PhantomJS script to run the TestRunner.html page (<a href="https://github.com/detro/phantomjs-jasminexml-example/blob/master/test/phantomjs_jasminexml_runner.js">Jasmine XML Runner</a>)</li>
-                <li>Script should write results in JUnit XML format</li>
+                <li>Phantom plugin writes results in JUnit XML format</li>
                 <li>Jasmine failure === build failure</li>
             </ul>
         </section>
@@ -270,7 +284,16 @@
         </section>
 
         <section>
-            <h3>Grails Scripts</h3>
+            <h3>GOAL</h3>
+            <br>
+            <ul>
+                <li>Capture coverage data during Grails build</li>
+                <li>Save results as Cobertura XML</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>JSCover Scripts</h3>
             <br><br>
             <ul>
                 <li>Startup the JSCover server</li>
@@ -317,6 +340,12 @@
                 <li>Load minimized JavaScript in production</li>
                 <li>Run r.js in eventCreateWarStart event to generate script for war</li>
             </ul>
+        </section>
+
+        <section>
+            <p>JavaScript is an expressive and powerful programming language</p>
+            <br>
+            <p>Let's start treating it like one</p>
         </section>
 
         <section>
