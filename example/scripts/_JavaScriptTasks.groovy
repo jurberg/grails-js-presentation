@@ -83,7 +83,7 @@ target(runJsCover: 'Runs JSCover Coverage Report') {
     def testResourcesDir = "scripts/lib"
     def phantomDir = System.getProperty("phantomDir") ?: ""
     def coveragePort = 3000
-    def exclusions = []
+    def exclusions = ['test/spec', 'scripts/lib', 'web-app/js/lib']
 
     event("StatusUpdate", ["Starting JSCover Coverage phase"])
 
