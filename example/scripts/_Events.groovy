@@ -43,7 +43,7 @@ eventCreateWarStart = {warName, stagingDir ->
     }
     */
 
-    ant.exec(outputproperty: "cmdOut", errorproperty: "cmdErr", resultproperty: "cmdExit", failonerror: "false", executable: "node") {
+    ant.exec(outputproperty: "cmdOut", errorproperty: "cmdErr", resultproperty: "cmdExit", failonerror: "false", executable: "/usr/local/bin/node") {
         arg(line: "${new File(curDir, 'r.js').absolutePath}")
         arg(line: "-o")
         arg(line: "${curDir}/build.js")
